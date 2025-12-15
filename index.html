@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USGPD | U.S. Global Peace Department</title>
+    <meta name="description" content="High-end research and strategic guidance for sustainable progress, peace building, and global governance.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:32,cg:true,m/qt=q:95">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Nova Paleta de Cores - Institucional */
+            --primary: #C9A441;           /* Dourado oficial */
+            --primary-dark: #9E7C2F;      /* Dourado escuro */
+            --primary-light: #E8D9A9;     /* Dourado claro para hovers */
+            --secondary: #1F2A44;         /* Azul institucional profundo */
+            --secondary-light: #243B5A;   /* Azul marinho clássico */
+            --accent: #C9A441;            /* Acento dourado */
+            --dark: #1F2A44;              /* Texto principal */
+            --light: #F5F7FA;             /* Branco institucional */
+            --gray: #6B7280;              /* Cinza diplomático */
+            --gray-light: #E5E7EB;        /* Cinza claro */
+            --white: #FFFFFF;
+            --black: #000000;
+            
+            /* Tipografia Clássica */
+            --font-heading: 'Playfair Display', serif;   /* Títulos - clássico */
+            --font-body: 'Source Serif Pro', serif;      /* Corpo de texto */
+            --font-ui: 'Lato', sans-serif;               /* UI elements */
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+            
+            /* Border Radius - mais sutis */
+            --radius-sm: 2px;
+            --radius-md: 4px;
+            --radius-lg: 8px;
+            --radius-xl: 12px;
+            
+            /* Shadows - mais sutis */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 2px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 4px 12px rgba(0,0,0,0.12);
+            --shadow-xl: 0 8px 24px rgba(0,0,0,0.15);
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-md);
+            color: var(--secondary);
+            letter-spacing: -0.3px;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            color: var(--gray);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button, 
+        .button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: var(--font-ui);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition-normal);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-header h2 {
+            display: inline-block;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .text-secondary {
+            color: var(--secondary);
+        }
+
+        .bg-light {
+            background-color: var(--light);
+        }
+
+        .bg-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .bg-dark {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .flex {
+            display: flex;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            gap: 10px;
+            font-family: var(--font-ui);
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 1px solid var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light {
+            background-color: transparent;
+            color: var(--white);
+            border: 1px solid var(--white);
+        }
+
+        .btn-outline-light:hover {
+            background-color: var(--white);
+            color: var(--secondary);
+        }
+
+        .btn-large {
+            padding: 16px 40px;
+            font-size: 0.9rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+            height: 100%;
+            border: 1px solid var(--gray-light);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: var(--secondary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .icon-box i {
+            font-size: 28px;
+            color: var(--primary);
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        header.scrolled {
+            padding: 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px var(--spacing-md);
+            gap: var(--spacing-md);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md); /* Aumentado o espaço aqui */
+            min-width: 200px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex: 1;
+            justify-content: center;
+            margin: 0 var(--spacing-md);
+        }
+
+        .nav-desktop > li {
+            position: relative;
+        }
+
+        .nav-desktop > li > a {
+            padding: 10px 20px;
+            font-weight: 600;
+            color: var(--secondary);
+            position: relative;
+            font-family: var(--font-ui);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-desktop > li > a:hover {
+            color: var(--primary);
+        }
+
+        .nav-desktop > li > a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 20px;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition-normal);
+        }
+
+        .nav-desktop > li > a:hover::after {
+            width: calc(100% - 40px);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            padding: var(--spacing-sm) 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-normal);
+            z-index: 100;
+            border: 1px solid var(--gray-light);
+        }
+
+        .dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 24px;
+            color: var(--secondary);
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            min-width: 200px;
+            justify-content: flex-end;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .mobile-toggle span {
+            height: 2px;
+            width: 100%;
+            background-color: var(--secondary);
+            border-radius: 1px;
+            transition: var(--transition-normal);
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 350px;
+            height: 100vh;
+            background-color: var(--white);
+            box-shadow: var(--shadow-lg);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            transition: var(--transition-normal);
+            z-index: 1001;
+            overflow-y: auto;
+            border-left: 1px solid var(--gray-light);
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .mobile-nav-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--secondary);
+            cursor: pointer;
+        }
+
+        .mobile-nav > ul > li {
+            margin-bottom: 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .mobile-nav > ul > li > a {
+            display: block;
+            padding: 16px 0;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--secondary);
+            font-family: var(--font-ui);
+        }
+
+        .mobile-dropdown {
+            padding-left: var(--spacing-md);
+            display: none;
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .mobile-dropdown a {
+            display: block;
+            padding: 12px 0;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .mobile-dropdown a:hover {
+            color: var(--primary);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(31, 42, 68, 0.7);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-normal);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(rgba(31, 42, 68, 0.9), rgba(36, 59, 90, 0.95)),
+                        url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--white);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.95;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        /* ===== MISSION SECTION ===== */
+        .mission-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition-normal);
+            height: 100%;
+        }
+
+        .mission-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mission-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--spacing-md);
+            background-color: var(--secondary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .mission-icon i {
+            font-size: 32px;
+            color: var(--primary);
+        }
+
+        .mission-item h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--secondary);
+        }
+
+        .mission-item p {
+            color: var(--gray);
+        }
+
+        /* ===== PROGRAMS SECTION ===== */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .program-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            height: 380px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-light);
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-normal);
+        }
+
+        .program-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .program-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--spacing-lg);
+            background: linear-gradient(transparent, rgba(31, 42, 68, 0.95));
+            color: var(--white);
+        }
+
+        .program-card h3 {
+            color: var(--white);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.5rem;
+        }
+
+        .program-card p {
+            opacity: 0.9;
+            margin-bottom: var(--spacing-md);
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ===== RESEARCH SECTION ===== */
+        .research {
+            background-color: var(--light);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .research-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+            border: 1px solid var(--gray-light);
+            height: 100%;
+        }
+
+        .research-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .research-icon {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .research-icon i {
+            font-size: 42px;
+            color: var(--primary);
+        }
+
+        .research-card h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--secondary);
+        }
+
+        .research-card p {
+            color: var(--gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* ===== IMPACT SECTION ===== */
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition-normal);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: var(--spacing-xs);
+            font-family: var(--font-heading);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .impact-map {
+            width: 100%;
+            height: 400px;
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--gray-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--light), var(--white));
+        }
+
+        .map-placeholder i {
+            font-size: 64px;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .testimonials .section-header h2 {
+            color: var(--white);
+        }
+
+        .testimonials .section-header h2::after {
+            background-color: var(--primary);
+        }
+
+        .testimonials .section-header p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 300;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+
+        .author-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .author-info p {
+            margin-bottom: 0;
+            opacity: 0.8;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .slider-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-normal);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .slider-btn:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+        }
+
+        .contact-info {
+            padding-right: var(--spacing-lg);
+        }
+
+        .contact-info h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--secondary);
+        }
+
+        .contact-info p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            margin-top: var(--spacing-lg);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-md);
+            background: var(--light);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-light);
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            margin-bottom: 5px;
+            color: var(--secondary);
+        }
+
+        .contact-item-content p {
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary);
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+            background: var(--white);
+            color: var(--secondary);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(201, 164, 65, 0.1);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-logo {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: var(--spacing-sm);
+            border: 2px solid var(--primary);
+        }
+
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: var(--spacing-md);
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+            position: relative;
+            padding-bottom: 12px;
+            font-family: var(--font-ui);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition-fast);
+            font-size: 0.95rem;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter h4 {
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+            position: relative;
+            padding-bottom: 12px;
+            font-family: var(--font-ui);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-newsletter h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-newsletter p {
+            opacity: 0.8;
+            margin-bottom: var(--spacing-md);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            font-family: var(--font-body);
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-form button {
+            padding: 14px 22px;
+            background-color: var(--primary);
+            color: var(--secondary);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            font-family: var(--font-ui);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            transition: var(--transition-normal);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .footer-social a {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-sm);
+            background-color: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition-normal);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--primary-light);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: var(--primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition-normal);
+            z-index: 99;
+            border: 1px solid var(--gray-light);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.1rem;
+            }
+            
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-lg);
+            }
+            
+            .nav-desktop {
+                gap: var(--spacing-sm);
+            }
+            
+            .nav-desktop > li > a {
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .header-actions {
+                display: none;
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .logo {
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: var(--spacing-lg) 0;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.9rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .mission-grid,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                padding-right: 0;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-author {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:60,cg:true,m/qt=q:95" 
+                     alt="USGPD Logo" class="logo-img">
+                <div class="logo-text">US<span class="text-primary">GPD</span></div>
+            </div>
+            
+            <nav class="nav-desktop">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#about">What We Do <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#peace">Peace Building</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#programs">Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#1000-points">1000 Points of Light</a></li>
+                        <li><a href="#corporate-governance">Corporate Governance</a></li>
+                        <li><a href="#leadership-training">Leadership Training</a></li>
+                    </ul>
+                </li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+                <a href="#programs" class="btn btn-primary">Explore Programs</a>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="logo">
+                <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:50,cg:true,m/qt=q:95" 
+                     alt="USGPD Logo" class="logo-img">
+                <div class="logo-text">US<span class="text-primary">GPD</span></div>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li>
+                <a href="#about">What We Do</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#peace">Peace Building</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#programs">Programs</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="#1000-points">1000 Points of Light</a></li>
+                    <li><a href="#corporate-governance">Corporate Governance</a></li>
+                    <li><a href="#leadership-training">Leadership Training</a></li>
+                </ul>
+            </li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="mobile-actions" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
+            <a href="#contact" class="btn btn-outline">Contact Us</a>
+            <a href="#programs" class="btn btn-primary">Explore Programs</a>
+        </div>
+    </nav>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Building Sustainable Peace Through <span>Strategic Leadership</span></h1>
+                <p>U.S. Global Peace Department delivers high-end research and strategic guidance for governments and organizations worldwide. Empowering leaders to see the Big Picture for lasting change.</p>
+                <div class="hero-actions">
+                    <a href="#programs" class="btn btn-primary btn-large">
+                        Explore Our Programs
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light btn-large">
+                        Request Consultation
+                        <i class="fas fa-calendar"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section" id="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission & Vision</h2>
+                <p>Guiding peace engagement through research, training, and strategic partnership</p>
+            </div>
+            
+            <div class="mission-grid grid-3">
+                <div class="mission-item">
+                    <div class="mission-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Global Peace Building</h3>
+                    <p>Developing frameworks for sustainable peace and conflict resolution across nations and communities.</p>
+                </div>
+                
+                <div class="mission-item">
+                    <div class="mission-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Strategic Research</h3>
+                    <p>Conducting in-depth analysis on governance, development, and peace-building methodologies.</p>
+                </div>
+                
+                <div class="mission-item">
+                    <div class="mission-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Leadership Development</h3>
+                    <p>Training tomorrow's leaders with the skills to navigate complex geopolitical landscapes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="section bg-light" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <p>Specialized training and strategic initiatives for sustainable development</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="1000 Points of Light Program">
+                    <div class="program-card-overlay">
+                        <h3>1000 Points of Light</h3>
+                        <p>Empowering grassroots leaders to become agents of change in their communities.</p>
+                        <a href="#1000-points" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Corporate Governance Program">
+                    <div class="program-card-overlay">
+                        <h3>Corporate Governance</h3>
+                        <p>Enhancing ethical leadership and governance frameworks for organizational excellence.</p>
+                        <a href="#corporate-governance" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Peace Building Program">
+                    <div class="program-card-overlay">
+                        <h3>Peace Building Framework</h3>
+                        <p>Comprehensive strategies for conflict resolution and sustainable peace development.</p>
+                        <a href="#peace-building" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section" id="research">
+        <div class="container">
+            <div class="section-header">
+                <h2>Research & Expertise</h2>
+                <p>Evidence-based insights for informed decision-making and policy development</p>
+            </div>
+            
+            <div class="research-grid grid-3">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <h3>Geopolitical Analysis</h3>
+                    <p>Comprehensive studies on global power dynamics and regional stability factors.</p>
+                    <a href="#geopolitical" class="btn btn-outline">View Research</a>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Conflict Resolution</h3>
+                    <p>Methodologies for mediation, negotiation, and sustainable peace agreements.</p>
+                    <a href="#conflict-resolution" class="btn btn-outline">View Research</a>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Governance Models</h3>
+                    <p>Analysis of effective governance structures for stability and development.</p>
+                    <a href="#governance" class="btn btn-outline">View Research</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Global Impact</h2>
+                <p>Transforming societies through strategic partnership and capacity building</p>
+            </div>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Years of Research</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">60+</div>
+                    <div class="stat-label">Countries Reached</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Leaders Trained</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Research Papers</div>
+                </div>
+            </div>
+            
+            <div class="impact-map">
+                <div class="map-placeholder">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Leadership Voices</h2>
+                <p>What global leaders say about our strategic guidance and training programs</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        "The Big Picture framework transformed our approach to governance. USGPD's research provided the strategic clarity we needed during critical decision-making periods."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                             alt="Dr. James Wilson" class="author-img">
+                        <div class="author-info">
+                            <h4>Dr. James Wilson</h4>
+                            <p>Former Ambassador, Strategic Advisor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <div class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Connect with our team for research inquiries, program information, or strategic consultation</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Reach out to discuss how USGPD can support your organization's peace-building and governance initiatives.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-item-content">
+                                <h4>Location</h4>
+                                <p>Global Headquarters<br>Research & Strategy Division</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-item-content">
+                                <h4>Email</h4>
+                                <p>info@usgpd.org<br>research@usgpd.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-item-content">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567<br>Office Hours: 9AM-5PM EST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">Area of Interest</label>
+                            <select id="interest" name="interest">
+                                <option value="">Select an option</option>
+                                <option value="research">Research Partnership</option>
+                                <option value="training">Leadership Training</option>
+                                <option value="consultation">Strategic Consultation</option>
+                                <option value="programs">Program Information</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:80,cg:true,m/qt=q:95" 
+                             alt="USGPD Logo" class="footer-logo-img">
+                    </div>
+                    <p>U.S. Global Peace Department delivers high-end research and strategic guidance for sustainable progress, peace building, and global governance.</p>
+                    
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#1000-points">1000 Points of Light</a></li>
+                        <li><a href="#corporate-governance">Corporate Governance</a></li>
+                        <li><a href="#leadership-training">Leadership Training</a></li>
+                        <li><a href="#peace-building">Peace Building</a></li>
+                        <li><a href="#strategic-research">Strategic Research</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for research insights and program updates.</p>
+                    
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 U.S. Global Peace Department. All Rights Reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            const overlay = document.getElementById('overlay');
+            
+            mobileToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            mobileNavClose.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            overlay.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+            });
+            
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 90,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Testimonial Slider
+            const testimonialItems = document.querySelectorAll('.testimonial-item');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                testimonialItems.forEach(item => item.style.display = 'none');
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                testimonialItems[index].style.display = 'block';
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            // Initialize first slide
+            if (testimonialItems.length > 0) {
+                showSlide(0);
+                
+                // Previous button
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', function() {
+                        let newIndex = currentSlide - 1;
+                        if (newIndex < 0) newIndex = testimonialItems.length - 1;
+                        showSlide(newIndex);
+                    });
+                }
+                
+                // Next button
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', function() {
+                        let newIndex = currentSlide + 1;
+                        if (newIndex >= testimonialItems.length) newIndex = 0;
+                        showSlide(newIndex);
+                    });
+                }
+                
+                // Dot navigation
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', function() {
+                        showSlide(index);
+                    });
+                });
+                
+                // Auto slide every 5 seconds
+                setInterval(function() {
+                    let newIndex = currentSlide + 1;
+                    if (newIndex >= testimonialItems.length) newIndex = 0;
+                    showSlide(newIndex);
+                }, 5000);
+            }
+            
+            // Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    
+                    // Simple validation
+                    if (!name || !email) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+                    
+                    // In a real application, you would send this data to a server
+                    // For now, we'll just show a success message
+                    alert('Thank you for your message, ' + name + '! We will contact you at ' + email + ' within 24-48 hours.');
+                    
+                    // Reset form
+                    this.reset();
+                });
+            }
+            
+            // Newsletter Form Submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const email = emailInput.value;
+                    
+                    if (!email || !email.includes('@')) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    
+                    alert('Thank you for subscribing to our newsletter!');
+                    emailInput.value = '';
+                });
+            }
+            
+            // Dropdown functionality for mobile
+            const dropdownTriggers = document.querySelectorAll('.mobile-nav > ul > li > a');
+            dropdownTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function(e) {
+                    if (this.nextElementSibling && this.nextElementSibling.classList.contains('mobile-dropdown')) {
+                        e.preventDefault();
+                        const dropdown = this.nextElementSibling;
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+            
+            // Initialize all dropdowns as hidden
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.style.display = 'none';
+            });
+        });
+        
+        // Add animation on scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.mission-item, .research-card, .program-card, .stat-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Initialize elements with animation styles
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.mission-item, .research-card, .program-card, .stat-item');
+            
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            // Trigger initial animation check
+            setTimeout(() => {
+                window.dispatchEvent(new Event('scroll'));
+            }, 100);
+        });
+    </script>
+</body>
+</html>
