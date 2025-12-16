@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-PH">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,45 +26,39 @@
         }
 
         :root {
-            /* Nova Paleta de Cores - Institucional */
-            --primary: #C9A441;           /* Dourado oficial */
-            --primary-dark: #9E7C2F;      /* Dourado escuro */
-            --primary-light: #E8D9A9;     /* Dourado claro para hovers */
-            --secondary: #1F2A44;         /* Azul institucional profundo */
-            --secondary-light: #243B5A;   /* Azul marinho clássico */
-            --accent: #C9A441;            /* Acento dourado */
-            --dark: #1F2A44;              /* Texto principal */
-            --light: #F5F7FA;             /* Branco institucional */
-            --gray: #6B7280;              /* Cinza diplomático */
-            --gray-light: #E5E7EB;        /* Cinza claro */
+            --primary: #C9A441;
+            --primary-dark: #9E7C2F;
+            --primary-light: #E8D9A9;
+            --secondary: #1F2A44;
+            --secondary-light: #243B5A;
+            --accent: #C9A441;
+            --dark: #1F2A44;
+            --light: #F5F7FA;
+            --gray: #6B7280;
+            --gray-light: #E5E7EB;
             --white: #FFFFFF;
             --black: #000000;
             
-            /* Tipografia Clássica */
-            --font-heading: 'Playfair Display', serif;   /* Títulos - clássico */
-            --font-body: 'Source Serif Pro', serif;      /* Corpo de texto */
-            --font-ui: 'Lato', sans-serif;               /* UI elements */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Source Serif Pro', serif;
+            --font-ui: 'Lato', sans-serif;
             
-            /* Spacing */
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
             --spacing-md: 2rem;
             --spacing-lg: 3rem;
             --spacing-xl: 4rem;
             
-            /* Border Radius - mais sutis */
             --radius-sm: 2px;
             --radius-md: 4px;
             --radius-lg: 8px;
             --radius-xl: 12px;
             
-            /* Shadows - mais sutis */
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
             --shadow-md: 0 2px 6px rgba(0,0,0,0.1);
             --shadow-lg: 0 4px 12px rgba(0,0,0,0.12);
             --shadow-xl: 0 8px 24px rgba(0,0,0,0.15);
             
-            /* Transitions */
             --transition-fast: 0.2s ease;
             --transition-normal: 0.3s ease;
             --transition-slow: 0.5s ease;
@@ -93,17 +87,10 @@
             letter-spacing: -0.3px;
         }
 
-        h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        h2 {
-            font-size: 2.4rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
+        h1 { font-size: 3.2rem; font-weight: 700; }
+        h2 { font-size: 2.4rem; position: relative; padding-bottom: 15px; }
+        h3 { font-size: 1.6rem; }
+        h4 { font-size: 1.25rem; font-weight: 600; }
 
         h2::after {
             content: '';
@@ -120,15 +107,6 @@
             transform: translateX(-50%);
         }
 
-        h3 {
-            font-size: 1.6rem;
-        }
-
-        h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
         p {
             margin-bottom: var(--spacing-md);
             color: var(--gray);
@@ -140,25 +118,10 @@
             transition: var(--transition-fast);
         }
 
-        ul, ol {
+        ul, ol, li {
             list-style: none;
-        }
-
-                /* REMOVER ESPAÇAMENTO E PONTOS DA LISTA DO HEADER */
-        .nav-desktop > ul {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            padding: 0;
             margin: 0;
-        }
-        
-        .nav-desktop ul {
-            list-style: none;
-        }
-
-        li {
-            list-style: none;
+            padding: 0;
         }
 
         img {
@@ -167,8 +130,7 @@
             display: block;
         }
 
-        button, 
-        .button {
+        button, .button {
             cursor: pointer;
             border: none;
             outline: none;
@@ -206,75 +168,13 @@
             font-size: 1.1rem;
         }
 
-        .text-primary {
-            color: var(--primary);
-        }
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .bg-light { background-color: var(--light); }
+        .bg-dark { background-color: var(--secondary); color: var(--white); }
+        .text-center { text-align: center; }
 
-        .text-secondary {
-            color: var(--secondary);
-        }
-
-        .bg-light {
-            background-color: var(--light);
-        }
-
-        .bg-primary {
-            background-color: var(--secondary);
-            color: var(--white);
-        }
-
-        .bg-dark {
-            background-color: var(--secondary);
-            color: var(--white);
-        }
-
-        /* ===== UTILITY CLASSES ===== */
-        .flex {
-            display: flex;
-        }
-
-        .flex-center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .flex-between {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .flex-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .grid {
-            display: grid;
-            gap: var(--spacing-md);
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .grid-4 {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .text-right {
-            text-align: right;
-        }
-
+        /* ===== BUTTONS ===== */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -309,7 +209,6 @@
         .btn-secondary:hover {
             background-color: var(--secondary-light);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
         }
 
         .btn-outline {
@@ -321,7 +220,6 @@
         .btn-outline:hover {
             background-color: var(--secondary);
             color: var(--white);
-            transform: translateY(-2px);
         }
 
         .btn-outline-light {
@@ -340,41 +238,7 @@
             font-size: 0.9rem;
         }
 
-        .card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-md);
-            transition: var(--transition-normal);
-            height: 100%;
-            border: 1px solid var(--gray-light);
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-light);
-        }
-
-        .icon-box {
-            width: 70px;
-            height: 70px;
-            background-color: var(--secondary);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .icon-box i {
-            font-size: 28px;
-            color: var(--primary);
-        }
-
-        /* ===== HEADER & NAVIGATION - SEM PONTOS/BULLETS ===== */
-        
-
+        /* ===== HEADER ===== */
         header {
             position: fixed;
             top: 0;
@@ -387,100 +251,81 @@
             border-bottom: 1px solid var(--gray-light);
         }
 
-                /* Remover bullets de todos os li dentro do header */
-        header li {
-            list-style: none;
-        }
-
         header.scrolled {
-            padding: 0;
             box-shadow: var(--shadow-md);
         }
 
-                .header-container {
+        .header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px var(--spacing-md); /* MUDOU: 15px → 10px */
-            gap: 0.5rem; /* MUDOU: var(--spacing-md) → 0.5rem */
+            padding: 10px var(--spacing-md);
         }
 
-         .logo {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 12px; /* MUDOU: var(--spacing-md) → 12px */
-            min-width: 150px; /* MUDOU: 180px → 150px */
+            gap: 12px;
         }
 
         .logo-img {
-    width: 50px; /* Reduzi a largura */
-    height: 50px; /* Reduzi a altura */
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--primary);
-}
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
 
         .logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.6rem; /* Reduzi o tamanho da fonte */
-    font-weight: 700;
-    color: var(--secondary);
-    letter-spacing: 0.5px; /* Reduzi o espaçamento entre letras */
-}
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
 
         .logo-text span {
             color: var(--primary);
         }
 
-                .nav-desktop {
+        /* ===== NAVIGATION ===== */
+        .nav-desktop {
             flex: 1;
-            margin: 0 1rem;
+            display: flex;
+            justify-content: center;
         }
 
-        .nav-desktop > li {
-            position: relative;
-            white-space: nowrap;
-        }
-
-        .nav-desktop > li > a {
-            padding: 12px 14px; /* MUDOU: 15px 20px → 12px 14px */
-            font-weight: 600;
-            color: var(--secondary);
-            position: relative;
-            font-family: var(--font-ui);
-            font-size: 0.82rem; /* MUDOU: 0.9rem → 0.82rem */
-            text-transform: uppercase;
-            letter-spacing: 0.3px; /* MUDOU: 0.5px → 0.3px */
+        .nav-desktop > ul {
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            min-height: 45px; /* MUDOU: 50px → 45px */
+            gap: 0;
         }
 
-        .nav-desktop > li > a:hover {
+        .nav-desktop > ul > li {
+            position: relative;
+        }
+
+        .nav-desktop > ul > li > a {
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            font-family: var(--font-ui);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-desktop > ul > li > a:hover {
             color: var(--primary);
         }
 
-        .nav-desktop > li > a::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 20px;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: var(--transition-normal);
+        .nav-desktop > ul > li > a.active {
+            color: var(--primary);
         }
 
-        .nav-desktop > li > a:hover::after {
-            width: calc(100% - 40px);
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
+        /* Dropdown */
         .dropdown-content {
             position: absolute;
             top: 100%;
@@ -520,28 +365,30 @@
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 8px; /* MUDOU: 15px → 8px */
-            min-width: 180px; /* MUDOU: 220px → 180px */
-            justify-content: flex-end;
-            margin-left: 5px; /* MUDOU: 10px → 5px */
+            gap: 10px;
         }
 
-        
+        .header-actions .btn {
+            padding: 10px 18px;
+            font-size: 0.8rem;
+        }
 
+        /* Mobile Toggle */
         .mobile-toggle {
             display: none;
             flex-direction: column;
             justify-content: space-between;
-            width: 30px;
-            height: 21px;
+            width: 28px;
+            height: 20px;
             cursor: pointer;
+            z-index: 1002;
         }
 
         .mobile-toggle span {
             height: 2px;
             width: 100%;
             background-color: var(--secondary);
-            border-radius: 1px;
+            border-radius: 2px;
             transition: var(--transition-normal);
         }
 
@@ -554,23 +401,23 @@
         }
 
         .mobile-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(6px, -6px);
         }
 
+        /* Mobile Navigation */
         .mobile-nav {
             position: fixed;
             top: 0;
             right: -100%;
             width: 100%;
-            max-width: 350px;
+            max-width: 320px;
             height: 100vh;
             background-color: var(--white);
             box-shadow: var(--shadow-lg);
-            padding: var(--spacing-xl) var(--spacing-lg);
+            padding: var(--spacing-lg);
             transition: var(--transition-normal);
             z-index: 1001;
             overflow-y: auto;
-            border-left: 1px solid var(--gray-light);
         }
 
         .mobile-nav.active {
@@ -581,7 +428,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
             padding-bottom: var(--spacing-md);
             border-bottom: 1px solid var(--gray-light);
         }
@@ -595,7 +442,6 @@
         }
 
         .mobile-nav > ul > li {
-            margin-bottom: 0;
             border-bottom: 1px solid var(--gray-light);
         }
 
@@ -616,7 +462,7 @@
 
         .mobile-dropdown a {
             display: block;
-            padding: 12px 0;
+            padding: 10px 0;
             color: var(--gray);
             font-size: 0.95rem;
         }
@@ -663,20 +509,18 @@
         }
 
         .hero h1 {
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             margin-bottom: var(--spacing-md);
             color: var(--white);
             line-height: 1.2;
-            font-weight: 700;
         }
 
         .hero h1 span {
             color: var(--primary);
-            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: var(--spacing-xl);
             opacity: 0.95;
             color: rgba(255, 255, 255, 0.9);
@@ -690,20 +534,15 @@
             flex-wrap: wrap;
         }
 
-        /* ===== THE BIG PICTURE SECTION ===== */
+        /* ===== BIG PICTURE SECTION ===== */
         .big-picture-content {
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .big-picture-content h2 {
-            margin-bottom: var(--spacing-lg);
-        }
-
         .big-picture-content p {
             font-size: 1.1rem;
             line-height: 1.8;
-            margin-bottom: var(--spacing-lg);
         }
 
         .quote-box {
@@ -712,8 +551,30 @@
             padding: var(--spacing-lg);
             margin: var(--spacing-xl) 0;
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--secondary);
+        }
+
+        /* ===== STRUCTURE GRID ===== */
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .structure-item {
+            padding: var(--spacing-lg);
+            border-left: 3px solid var(--primary);
+            background-color: var(--white);
+        }
+
+        .structure-item h4 {
+            color: var(--secondary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .structure-item p {
+            margin-bottom: 0;
         }
 
         /* ===== PROGRAMS SECTION ===== */
@@ -729,7 +590,6 @@
             border-radius: var(--radius-lg);
             height: 400px;
             box-shadow: var(--shadow-md);
-            border: 1px solid var(--gray-light);
         }
 
         .program-card img {
@@ -750,13 +610,7 @@
             width: 100%;
             height: 100%;
             padding: var(--spacing-lg);
-            background: linear-gradient(
-                to top, 
-                rgba(31, 42, 68, 0.95) 0%, 
-                rgba(31, 42, 68, 0.85) 30%, 
-                rgba(31, 42, 68, 0.7) 60%, 
-                rgba(31, 42, 68, 0.4) 100%
-            );
+            background: linear-gradient(to top, rgba(31, 42, 68, 0.95) 0%, rgba(31, 42, 68, 0.7) 50%, transparent 100%);
             color: var(--white);
             display: flex;
             flex-direction: column;
@@ -766,29 +620,18 @@
         .program-card h3 {
             color: var(--white);
             margin-bottom: var(--spacing-sm);
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-            line-height: 1.3;
+            font-size: 1.6rem;
         }
 
         .program-card p {
-            opacity: 0.95;
-            margin-bottom: var(--spacing-lg);
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--spacing-md);
         }
 
-        /* ===== AREAS OF STUDY SECTION ===== */
-        .study-areas {
-            background-color: var(--light);
-        }
-
+        /* ===== STUDY AREAS ===== */
         .study-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--spacing-lg);
         }
 
@@ -797,9 +640,8 @@
             border-radius: var(--radius-lg);
             padding: var(--spacing-lg);
             box-shadow: var(--shadow-md);
-            transition: var(--transition-normal);
             border: 1px solid var(--gray-light);
-            height: 100%;
+            transition: var(--transition-normal);
         }
 
         .study-item:hover {
@@ -811,34 +653,147 @@
         .study-item h4 {
             color: var(--primary);
             margin-bottom: var(--spacing-sm);
-            font-size: 1.2rem;
         }
 
         .study-item p {
-            font-size: 0.95rem;
-            color: var(--gray);
             margin-bottom: 0;
+            font-size: 0.95rem;
         }
 
-        /* ===== PEACE DEPARTMENT STRUCTURE SECTION ===== */
-        .structure-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
+        /* ===== POINTS OF LIGHT ===== */
+        .points-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .structure-item {
-            padding: var(--spacing-lg);
-            border-left: 3px solid var(--primary);
-            background-color: var(--light);
+        .points-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .structure-item h4 {
-            color: var(--secondary);
+        .form-container {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-light);
+            margin-top: var(--spacing-lg);
+        }
+
+        .form-container h3 {
             margin-bottom: var(--spacing-sm);
         }
 
-        /* ===== EXECUTIVE TEAM SECTION ===== */
+        /* ===== FORMS ===== */
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary);
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+            background: var(--white);
+            color: var(--secondary);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(201, 164, 65, 0.15);
+        }
+
+        /* ===== CERTIFICATIONS ===== */
+        .payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.payment-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 30px 25px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-light);
+    text-align: center;
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.payment-card h3 {
+    color: var(--secondary);
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.payment-card > p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+/* Responsive para telas menores */
+@media (max-width: 400px) {
+    .course-details-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .course-detail-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 12px 15px;
+        min-height: auto;
+    }
+    
+    .course-detail-item i {
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+    
+    .course-detail-item div {
+        text-align: left;
+    }
+}
+
+@media (max-width: 360px) {
+    .payment-card {
+        padding: 25px 20px;
+    }
+    
+    .payment-card h3 {
+        font-size: 1.15rem;
+    }
+}
+
+        /* ===== TEAM SECTION ===== */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -887,60 +842,15 @@
             line-height: 1.6;
         }
 
-        /* ===== PAYMENT/PROGRAMS SECTION ===== */
-        .payment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--spacing-lg);
-        }
-
-        .payment-card {
-            background-color: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--gray-light);
-            text-align: center;
-            transition: var(--transition-normal);
-        }
-
-        .payment-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary);
-        }
-
-        .payment-card h3 {
-            color: var(--secondary);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .payment-card p {
-            color: var(--gray);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: var(--spacing-lg);
-        }
-
         /* ===== CONTACT SECTION ===== */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: var(--spacing-xl);
-        }
-
-        .contact-info {
-            padding-right: var(--spacing-lg);
         }
 
         .contact-info h3 {
             margin-bottom: var(--spacing-md);
-            color: var(--secondary);
         }
 
         .contact-details {
@@ -955,7 +865,6 @@
             padding: var(--spacing-md);
             background: var(--light);
             border-radius: var(--radius-md);
-            border: 1px solid var(--gray-light);
         }
 
         .contact-item i {
@@ -971,70 +880,13 @@
             flex-shrink: 0;
         }
 
-        .contact-form .form-group {
-            margin-bottom: var(--spacing-md);
+        .contact-item h4 {
+            margin-bottom: 5px;
         }
 
-        .contact-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--secondary);
-            font-family: var(--font-ui);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid var(--gray-light);
-            border-radius: var(--radius-sm);
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: var(--transition-fast);
-            background: var(--white);
-            color: var(--secondary);
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(201, 164, 65, 0.1);
-        }
-
-        /* ===== 1000 POINTS OF LIGHT SECTION ===== */
-        .points-light-section {
-            background-color: var(--light);
-        }
-
-        .points-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .points-content h3 {
-            color: var(--secondary);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .points-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .form-container {
-            background-color: var(--white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--gray-light);
+        .contact-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
         }
 
         /* ===== FOOTER ===== */
@@ -1051,13 +903,9 @@
             margin-bottom: var(--spacing-xl);
         }
 
-        .footer-logo {
-            margin-bottom: var(--spacing-md);
-        }
-
         .footer-logo-img {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: var(--spacing-sm);
@@ -1066,51 +914,15 @@
 
         .footer-about p {
             opacity: 0.8;
-            margin-bottom: var(--spacing-md);
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.7;
         }
 
-        .footer-links h4 {
-            color: var(--white);
-            margin-bottom: var(--spacing-md);
-            font-size: 1.1rem;
-            position: relative;
-            padding-bottom: 12px;
-            font-family: var(--font-ui);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .footer-links h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--primary);
-        }
-
-        .footer-links ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links ul li a {
-            color: rgba(255, 255, 255, 0.7);
-            transition: var(--transition-fast);
-            font-size: 0.95rem;
-        }
-
-        .footer-links ul li a:hover {
-            color: var(--primary);
-            padding-left: 5px;
-        }
-
+        .footer-links h4,
         .footer-newsletter h4 {
             color: var(--white);
             margin-bottom: var(--spacing-md);
-            font-size: 1.1rem;
+            font-size: 1rem;
             position: relative;
             padding-bottom: 12px;
             font-family: var(--font-ui);
@@ -1118,6 +930,7 @@
             letter-spacing: 1px;
         }
 
+        .footer-links h4::after,
         .footer-newsletter h4::after {
             content: '';
             position: absolute;
@@ -1128,10 +941,25 @@
             background-color: var(--primary);
         }
 
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
         .footer-newsletter p {
             opacity: 0.8;
-            margin-bottom: var(--spacing-md);
             color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--spacing-md);
         }
 
         .newsletter-form {
@@ -1141,7 +969,7 @@
 
         .newsletter-form input {
             flex: 1;
-            padding: 14px 16px;
+            padding: 12px 16px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: var(--radius-sm);
             background-color: rgba(255, 255, 255, 0.05);
@@ -1154,17 +982,12 @@
         }
 
         .newsletter-form button {
-            padding: 14px 22px;
+            padding: 12px 20px;
             background-color: var(--primary);
             color: var(--secondary);
             border: none;
             border-radius: var(--radius-sm);
-            font-weight: 600;
             cursor: pointer;
-            font-family: var(--font-ui);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
             transition: var(--transition-normal);
         }
 
@@ -1180,8 +1003,8 @@
         }
 
         .footer-social a {
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             border-radius: var(--radius-sm);
             background-color: rgba(255, 255, 255, 0.05);
             display: flex;
@@ -1203,17 +1026,11 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
             font-size: 0.9rem;
-            opacity: 0.7;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .footer-bottom a {
             color: var(--primary);
-            text-decoration: underline;
-        }
-
-        .footer-bottom a:hover {
-            color: var(--primary-light);
         }
 
         /* ===== BACK TO TOP ===== */
@@ -1236,7 +1053,6 @@
             transform: translateY(20px);
             transition: var(--transition-normal);
             z-index: 99;
-            border: 1px solid var(--gray-light);
         }
 
         .back-to-top.active {
@@ -1248,122 +1064,99 @@
         .back-to-top:hover {
             background-color: var(--primary);
             color: var(--white);
-            transform: translateY(-5px);
         }
-        /* BOTÕES DO HEADER MENORES */
-        .header-actions .btn {
-            padding: 10px 16px;
-            font-size: 0.8rem;
+
+        /* ===== NOTIFICATION TOAST ===== */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            padding: 16px 24px;
+            border-radius: var(--radius-md);
+            color: var(--white);
+            font-family: var(--font-ui);
+            font-size: 0.95rem;
+            z-index: 9999;
+            transform: translateX(400px);
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-lg);
+            max-width: 350px;
         }
-        /* ===== RESPONSIVE DESIGN ===== */
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            background-color: #10B981;
+        }
+
+        .notification.error {
+            background-color: #EF4444;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .animate-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-element.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            h1 {
-                font-size: 2.8rem;
-            }
-            
-            h2 {
-                font-size: 2.1rem;
-            }
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
             
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
-                gap: var(--spacing-lg);
-            }
-            
-            .nav-desktop > li > a {
-                padding: 15px 16px;
-                font-size: 0.85rem;
             }
         }
 
-        @media (max-width: 950px) {
+        @media (max-width: 900px) {
+            .nav-desktop,
             .header-actions {
-                display: none;
-            }
-            
-            .nav-desktop {
                 display: none;
             }
             
             .mobile-toggle {
                 display: flex;
             }
-            
-            .logo {
-                min-width: auto;
-            }
         }
 
         @media (max-width: 768px) {
-            .section {
-                padding: var(--spacing-lg) 0;
-            }
+            .section { padding: var(--spacing-lg) 0; }
             
-            h1 {
-                font-size: 2.4rem;
-            }
-            
-            h2 {
-                font-size: 1.9rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+            .hero h1 { font-size: 2.5rem; }
             
             .hero-actions {
                 flex-direction: column;
-                align-items: flex-start;
             }
             
             .hero-actions .btn {
                 width: 100%;
-                justify-content: center;
-            }
-            
-            .mission-grid,
-            .grid-3,
-            .grid-4 {
-                grid-template-columns: 1fr;
             }
             
             .contact-grid {
                 grid-template-columns: 1fr;
             }
             
-            .contact-info {
-                padding-right: 0;
-            }
-            
             .programs-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .program-card {
-                height: 380px;
             }
         }
 
         @media (max-width: 576px) {
-            .container {
-                padding: 0 var(--spacing-sm);
-            }
+            .container { padding: 0 var(--spacing-sm); }
             
-            h1 {
-                font-size: 2rem;
-            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.7rem; }
             
-            h2 {
-                font-size: 1.7rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
+            .hero h1 { font-size: 2rem; }
             
             .footer-content {
                 grid-template-columns: 1fr;
@@ -1372,305 +1165,965 @@
             .newsletter-form {
                 flex-direction: column;
             }
-            
-            .program-card {
-                height: 350px;
-            }
         }
-
-        /* Remove bullets / markers e pseudo-separadores do header/nav */
-header .nav-desktop,
-header .nav-desktop ul,
-header .nav-desktop li {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+        /* ===== DESTAQUE DO PRESIDENTE ===== */
+.team-member.president-card {
+    border: 2px solid var(--primary); /* Borda dourada em todo o card */
+    transform: scale(1.05); /* Aumenta levemente o card inteiro */
+    z-index: 2; /* Garante que fique sobreposto se necessário */
+    background-color: #fffcf5; /* Fundo levemente dourado/creme */
 }
 
-/* Remove qualquer ::marker ou pseudo (::before/::after) que esteja gerando pontos */
-header .nav-desktop li::marker,
-header .nav-desktop li::before,
-header .nav-desktop li::after,
-header .nav-desktop > li::before,
-header .nav-desktop > li::after {
-  content: none !important;
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
+.team-member.president-card .member-img {
+    width: 240px;  /* AUMENTADO de 150px para 240px */
+    height: 240px; /* Mantém proporção quadrada */
+    border-width: 5px; /* Borda da foto mais grossa */
+    object-position: center 20%; /* Ajusta o foco para o rosto (aproximação visual) */
 }
 
-/* Garante que os links fiquem alinhados em linha e adiciona espaçamento visual controlado */
-header .nav-desktop > ul {
-  display: flex !important;
-  gap: 18px; /* ajuste o valor se quiser mais/menos espaço */
-  align-items: center;
+.team-member.president-card .member-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
-/* Remove possíveis imagens de fundo usadas como separador */
-header .nav-desktop a {
-  background-image: none !important;
-}
-
-/* Fallback: remove pequenos caracteres de texto "•" caso tenham sido inseridos */
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('header .nav-desktop li').forEach(li => {
-    if (li.firstChild && li.firstChild.nodeType === 3) {
-      const txt = li.firstChild.textContent.trim();
-      if (txt === '•' || txt === '·' || txt === '•\u00A0') li.removeChild(li.firstChild);
+/* Ajuste para celular para não ficar gigante demais */
+@media (max-width: 768px) {
+    .team-member.president-card {
+        transform: scale(1);
     }
-  });
-});
+    .team-member.president-card .member-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+/* ===== DESTAQUE DO PRESIDENTE ===== */
+.team-member.president-card {
+    border: 3px solid var(--primary);
+    transform: scale(1.05);
+    z-index: 2;
+    background: linear-gradient(135deg, #fffcf5 0%, #fff9e6 100%);
+    box-shadow: 0 8px 30px rgba(201, 164, 65, 0.25);
+}
 
-/* torna a área do logo inteira como link sem quebrar layout */
-.logo-link {
+.team-member.president-card .member-img {
+    width: 220px;
+    height: 220px;
+    border-width: 5px;
+    object-position: center 20%;
+}
+
+.team-member.president-card h4 {
+    font-size: 1.4rem;
+    color: var(--secondary);
+}
+
+.team-member.president-card .member-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* ===== DESTAQUE DOS OUTROS MEMBROS (MENOR) ===== */
+.team-member.executive-card {
+    border: 2px solid var(--primary-light);
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+    box-shadow: 0 4px 15px rgba(31, 42, 68, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member.executive-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.team-member.executive-card .member-img {
+    width: 180px;
+    height: 180px;
+    border-width: 4px;
+    border-color: var(--primary-light);
+    transition: all 0.3s ease;
+}
+
+.team-member.executive-card:hover .member-img {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.team-member.executive-card h4 {
+    font-size: 1.25rem;
+    color: var(--secondary);
+}
+
+.team-member.executive-card .member-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding: 6px 12px;
+    background-color: rgba(201, 164, 65, 0.1);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.team-member.executive-card .member-bio {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.team-member.president-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 40px rgba(201, 164, 65, 0.35);
+}
+
+.team-member.executive-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(31, 42, 68, 0.15);
+    border-color: var(--primary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .team-member.president-card {
+        transform: scale(1);
+    }
+    
+    .team-member.president-card .member-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .team-member.executive-card .member-img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* ===== CREDIBILITY / IMPACT BAR ===== */
+.impact-bar {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.impact-item {
+    text-align: center;
+    color: var(--white);
+}
+
+.impact-number {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.impact-label {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.9;
+}
+
+/* ===== THE BIG PICTURE - CARDS VERSION ===== */
+.big-picture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.big-picture-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-light);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.big-picture-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.big-picture-card:hover::before {
+    transform: scaleX(1);
+}
+
+.big-picture-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.big-picture-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    position: relative;
+}
+
+.big-picture-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed var(--primary);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.big-picture-icon i {
+    font-size: 32px;
+    color: var(--primary);
+}
+
+.big-picture-card h4 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.big-picture-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Quote destacada */
+.quote-highlight {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    border-radius: var(--radius-lg);
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.quote-highlight::before {
+    content: '"';
+    font-family: var(--font-heading);
+    font-size: 120px;
+    color: var(--primary);
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    line-height: 1;
+}
+
+.quote-highlight p {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-highlight cite {
+    color: var(--primary);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== MODAL STYLES ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 42, 68, 0.9);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    padding: 30px;
+    position: relative;
+}
+
+.modal-header h3 {
+    color: var(--white);
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+}
+
+.modal-header p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: var(--primary);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.syllabus-section {
+    margin-bottom: 25px;
+}
+
+.syllabus-section h4 {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.syllabus-section h4 i {
+    color: var(--primary);
+}
+
+.syllabus-list {
+    padding-left: 0;
+}
+
+.syllabus-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-light);
     display: flex;
     align-items: center;
     gap: 12px;
-    text-decoration: none;
-    color: inherit;
+    color: var(--gray);
 }
 
-.logo-link:focus {
-    outline: 3px solid rgba(201,164,65,0.25);
-    outline-offset: 3px;
+.syllabus-list li:last-child {
+    border-bottom: none;
 }
 
-        /* ===== FIX MOBILE TITLES (H2) ===== */
-@media (max-width: 768px) {
+.syllabus-list li i {
+    color: var(--primary);
+    font-size: 14px;
+}
 
-  .section-header {
-    padding-left: 0;
-    padding-right: 0;
-  }
+.modal-footer {
+    padding: 20px 30px 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-  .section-header h2 {
-    font-size: 1.8rem;          /* reduz tamanho */
-    line-height: 1.25;
-    word-break: break-word;    /* evita corte */
+.modal-footer .btn {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ===== COURSE DETAILS GRID (CORRIGIDO) ===== */
+.course-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.course-detail-item {
     text-align: center;
-    max-width: 100%;
-  }
-
-  .section-header h2::after {
-    width: 40px;               /* linha menor no mobile */
-    height: 3px;
-    bottom: -10px;
-  }
-
-  .section-header p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
+    padding: 15px 10px;
+    background: var(--light);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
 }
 
-/* ===== EXTRA SAFETY (mobile very small screens) ===== */
-@media (max-width: 480px) {
-  .section-header h2 {
-    font-size: 1.6rem;
-  }
+.course-detail-item i {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 8px;
 }
 
-        /* ================================
-   FIX MOBILE – TITLES (H2)
-   ================================ */
-@media (max-width: 768px) {
-
-  .section-header {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .section-header h2 {
-    font-size: 1.8rem;
-    line-height: 1.25;
-    word-break: break-word;
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .section-header h2::after {
-    width: 40px;
-    height: 3px;
-    bottom: -10px;
-  }
-
-  .section-header p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
+.course-detail-item span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* EXTRA SAFETY – TELAS MUITO PEQUENAS */
-@media (max-width: 480px) {
-  .section-header h2 {
-    font-size: 1.6rem;
-  }
-}
-
-/* ================================
-   HERO – MELHORIA MOBILE
-   ================================ */
-@media (max-width: 768px) {
-
-  .hero {
-    background-attachment: scroll;
-    padding-top: 120px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
+.course-detail-item strong {
+    color: var(--secondary);
+    font-size: 0.85rem;
     line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
 }
 
-/* ================================
-   PROGRAM CARDS – MOBILE
-   ================================ */
-@media (max-width: 768px) {
 
-  .program-card {
-    height: auto;
-    min-height: 340px;
-  }
+/* ===== FAQ SECTION ===== */
+.faq-section {
+    background-color: var(--white);
+}
 
-  .program-card h3 {
-    font-size: 1.5rem;
-  }
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-  .program-card p {
+.faq-item {
+    border: 1px solid var(--gray-light);
+    border-radius: var(--radius-md);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--primary-light);
+}
+
+.faq-item.active {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 25px;
+    background: var(--white);
+    border: none;
+    text-align: left;
+    font-family: var(--font-ui);
     font-size: 1rem;
-  }
+    font-weight: 600;
+    color: var(--secondary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
 }
 
-/* ================================
-   MENU MOBILE – ÁREA DE TOQUE
-   ================================ */
-.mobile-nav > ul > li > a {
-  padding: 18px 0;
-  font-size: 1.05rem;
+.faq-question:hover {
+    background: var(--light);
 }
 
-        
+.faq-item.active .faq-question {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.faq-question i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    color: var(--primary);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: var(--primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer-content {
+    padding: 25px;
+    background: var(--light);
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.faq-answer-content p {
+    margin-bottom: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(201, 164, 65, 0.1) 0%, transparent 50%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section h2::after {
+    display: none;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== IMPROVED FOOTER ===== */
+.footer-simplified {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 60px 0 30px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.footer-contact-item i {
+    color: var(--primary);
+    width: 20px;
+}
+
+.footer-heading {
+    color: var(--white);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.footer-nav li {
+    margin-bottom: 12px;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-nav a:hover {
+    color: var(--primary);
+    transform: translateX(5px);
+}
+
+.footer-newsletter-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-newsletter-box p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-input-group input {
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+    font-family: var(--font-body);
+}
+
+.newsletter-input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-input-group button {
+    padding: 14px 20px;
+    background: var(--primary);
+    color: var(--secondary);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input-group button:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+.footer-bottom-bar {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social-links a {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ===== UPDATED PROGRAM CARDS ===== */
+.program-card-overlay .btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-light {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary-light:hover {
+    background: var(--white);
+    color: var(--secondary);
+}
+
+/* ===== RESPONSIVE ADDITIONS ===== */
+@media (max-width: 1024px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .big-picture-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .impact-number {
+        font-size: 2.5rem;
+    }
+    
+    .big-picture-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quote-highlight {
+        padding: 30px 20px;
+    }
+    
+    .quote-highlight p {
+        font-size: 1.1rem;
+    }
+    
+    .course-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .impact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .impact-number {
+        font-size: 2rem;
+    }
+    
+    .impact-label {
+        font-size: 0.8rem;
+    }
+}
     </style>
 </head>
+Aqui está a **Parte 2** - HTML atualizado com todas as melhorias.
+
+**Substitua todo o conteúdo entre `<body>` e `</body>` por este código:**
+
+```html
 <body>
-<!-- Header & Navigation (ATUALIZADO: logo como botão Home) -->
-<header id="header">
-    <div class="container header-container">
-        <!-- Logo como link para #home -->
-        <a href="#home" class="logo logo-link" aria-label="USGPD - Home">
-            <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:60,cg:true,m/qt=q:95"
-                 alt="USGPD Logo" class="logo-img">
-            <div class="logo-text">US<span class="text-primary">GPD</span></div>
-        </a>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:60,cg:true,m/qt=q:95" alt="USGPD Logo" class="logo-img">
+                <div class="logo-text">US<span class="text-primary">GPD</span></div>
+            </a>
 
-        <nav class="nav-desktop" aria-label="Main Navigation">
-            <ul>
-                <!-- REMOVIDO o item 'Home' daqui -->
-                <li class="dropdown">
-                    <a href="#big-picture">The Big Picture <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="#big-picture">Our Philosophy</a></li>
-                        <li><a href="#mission">Our Mission</a></li>
-                        <li><a href="#structure">Department Structure</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#programs">Programs <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="#1000-points">1000 Points of Light</a></li>
-                        <li><a href="#areas-study">Areas of Study</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#governance">Governance <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="#corporate-governance">Corporate Governance</a></li>
-                        <li><a href="#leadership">Strategic Leadership</a></li>
-                        <li><a href="#peace-department">Peace Department Concept</a></li>
-                    </ul>
-                </li>
-                <li><a href="#team">Executive Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+            <nav class="nav-desktop">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#big-picture">The Big Picture <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#big-picture">Our Philosophy</a>
+                            <a href="#mission">Our Mission</a>
+                            <a href="#structure">Department Structure</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#programs">Programs <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#1000-points">1000 Points of Light</a>
+                            <a href="#areas-study">Areas of Study</a>
+                            <a href="#certifications">Certifications</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#governance">Governance <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#governance">Corporate Governance</a>
+                            <a href="#leadership">Strategic Leadership</a>
+                            <a href="#mission">Peace Department Concept</a>
+                        </div>
+                    </li>
+                    <li><a href="#team">Executive Team</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
 
-        <div class="header-actions">
-            <a href="#payment" class="btn btn-outline">Registration</a>
-            <a href="#contact" class="btn btn-primary">Contact Us</a>
+            <div class="header-actions">
+                <a href="#certifications" class="btn btn-outline">Programs</a>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-
-        <div class="mobile-toggle" id="mobileToggle" aria-controls="mobileNav" aria-expanded="false" role="button" tabindex="0">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</header>
-
-
-<!-- Mobile Navigation (ATUALIZADO) -->
-<nav class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <div class="mobile-nav-header">
-        <a href="#home" class="logo logo-link">
-            <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:50,cg:true,m/qt=q:95" 
-                 alt="USGPD Logo" class="logo-img">
-            <div class="logo-text">US<span class="text-primary">GPD</span></div>
-        </a>
-        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-
-    <ul>
-        <!-- Home removido aqui também; logo já leva para #home -->
-        <li>
-            <a href="#big-picture">The Big Picture</a>
-            <ul class="mobile-dropdown">
-                <li><a href="#big-picture">Our Philosophy</a></li>
-                <li><a href="#mission">Our Mission</a></li>
-                <li><a href="#structure">Department Structure</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#programs">Programs</a>
-            <ul class="mobile-dropdown">
-                <li><a href="#1000-points">1000 Points of Light</a></li>
-                <li><a href="#areas-study">Areas of Study</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#governance">Governance</a>
-            <ul class="mobile-dropdown">
-                <li><a href="#corporate-governance">Corporate Governance</a></li>
-                <li><a href="#leadership">Strategic Leadership</a></li>
-                <li><a href="#peace-department">Peace Department</a></li>
-            </ul>
-        </li>
-        <li><a href="#team">Executive Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="mobile-actions" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-        <a href="#payment" class="btn btn-outline">Registration</a>
-        <a href="#contact" class="btn btn-primary">Contact Us</a>
-    </div>
-</nav>
-
-
+    </header>
 
     <!-- Mobile Navigation -->
     <nav class="mobile-nav" id="mobileNav">
         <div class="mobile-nav-header">
             <div class="logo">
-                <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:50,cg:true,m/qt=q:95" 
-                     alt="USGPD Logo" class="logo-img">
+                <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:50,cg:true,m/qt=q:95" alt="USGPD Logo" class="logo-img">
                 <div class="logo-text">US<span class="text-primary">GPD</span></div>
             </div>
             <button class="mobile-nav-close" id="mobileNavClose">
@@ -1682,34 +2135,35 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="#home">Home</a></li>
             <li>
                 <a href="#big-picture">The Big Picture</a>
-                <ul class="mobile-dropdown">
-                    <li><a href="#big-picture">Our Philosophy</a></li>
-                    <li><a href="#mission">Our Mission</a></li>
-                    <li><a href="#structure">Department Structure</a></li>
-                </ul>
+                <div class="mobile-dropdown">
+                    <a href="#big-picture">Our Philosophy</a>
+                    <a href="#mission">Our Mission</a>
+                    <a href="#structure">Department Structure</a>
+                </div>
             </li>
             <li>
                 <a href="#programs">Programs</a>
-                <ul class="mobile-dropdown">
-                    <li><a href="#1000-points">1000 Points of Light</a></li>
-                    <li><a href="#areas-study">Areas of Study</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                </ul>
+                <div class="mobile-dropdown">
+                    <a href="#1000-points">1000 Points of Light</a>
+                    <a href="#areas-study">Areas of Study</a>
+                    <a href="#certifications">Certifications</a>
+                </div>
             </li>
             <li>
                 <a href="#governance">Governance</a>
-                <ul class="mobile-dropdown">
-                    <li><a href="#corporate-governance">Corporate Governance</a></li>
-                    <li><a href="#leadership">Strategic Leadership</a></li>
-                    <li><a href="#peace-department">Peace Department</a></li>
-                </ul>
+                <div class="mobile-dropdown">
+                    <a href="#governance">Corporate Governance</a>
+                    <a href="#leadership">Strategic Leadership</a>
+                    <a href="#mission">Peace Department</a>
+                </div>
             </li>
             <li><a href="#team">Executive Team</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         
-        <div class="mobile-actions" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-            <a href="#payment" class="btn btn-outline">Registration</a>
+        <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
+            <a href="#certifications" class="btn btn-outline">Programs</a>
             <a href="#contact" class="btn btn-primary">Contact Us</a>
         </div>
     </nav>
@@ -1721,79 +2175,181 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="container">
             <div class="hero-content">
                 <h1>Building Sustainable Peace Through <span>Strategic Leadership</span></h1>
-                <p>U.S. Global Peace Department delivers high-end research and strategic guidance for governments and organizations worldwide. Empowering leaders to see the Big Picture for lasting change.</p>
+                <p>Empowering governments and organizations worldwide with high-end research, strategic guidance, and leadership training for lasting global change.</p>
                 <div class="hero-actions">
                     <a href="#programs" class="btn btn-primary btn-large">
-                        Explore Our Programs
-                        <i class="fas fa-arrow-right"></i>
+                        Explore Programs <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="#contact" class="btn btn-outline-light btn-large">
-                        Request Consultation
-                        <i class="fas fa-calendar"></i>
+                        Request Consultation <i class="fas fa-calendar"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Big Picture Section -->
+    <!-- Impact / Credibility Bar -->
+    <section class="impact-bar">
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number" data-count="500">0</span>
+                    <span class="impact-label">Leaders Trained</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number" data-count="25">0</span>
+                    <span class="impact-label">Countries Reached</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number" data-count="20">0</span>
+                    <span class="impact-label">Years of Research</span>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number" data-count="50">0</span>
+                    <span class="impact-label">Strategic Programs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Big Picture Section (REDESIGNED) -->
     <section class="section" id="big-picture">
         <div class="container">
             <div class="section-header">
                 <h2>The Big Picture</h2>
-                <p>A guidance to peace engagement through expanded consciousness</p>
+                <p>A holistic approach to peace engagement through expanded consciousness</p>
             </div>
             
-            <div class="big-picture-content">
-                <p>The big picture thinking is simply the expansion of consciousness, and the usage of that expanded consciousness for strategic growth and development. Every society today faces both unique and challenging circumstances that inhibit the level of growth and development needed to match the era we are living in.</p>
-                
-                <p>While the world is moving fast, and we see the global population increasing at a fast rate the rifts between individuals and groups have only widened. At the center of it all is inequality. Other factors like the global pandemic, food shortage and security will always highlight the shortcomings of each society.</p>
-                
-                <div class="quote-box">
-                    "At this juncture, a matching type of leadership is required to take on these modern day inefficiencies, taking into consideration at the same time, the local, regional and global geopolitical ramifications. Bold leaders, giving more, dignifying others, showing empathy and being courageous."
+            <div class="big-picture-grid">
+                <div class="big-picture-card">
+                    <div class="big-picture-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Expanded Consciousness</h4>
+                    <p>Developing the mental frameworks needed to see beyond immediate challenges and understand interconnected global systems.</p>
                 </div>
                 
-                <p>Over twenty years, U.S. Global Peace Department monitored, conducted in-depth study and research strategies that can be used to steer societies through these times. Sustained progress is only achievable with leaders who learn, understand and demonstrate the audacity to see the Big Picture.</p>
+                <div class="big-picture-card">
+                    <div class="big-picture-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h4>Geopolitical Clarity</h4>
+                    <p>Understanding local, regional, and international dynamics to make informed decisions that promote sustainable peace.</p>
+                </div>
                 
-                <p>This Big Picture skill-set includes a range of areas like peace building, reasonable governance, conflict resolution, emotional intelligence, geopolitical clarity, strategic out-sight, accountability and people cohesion.</p>
+                <div class="big-picture-card">
+                    <div class="big-picture-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Strategic Growth</h4>
+                    <p>Implementing methodologies that drive development while maintaining social cohesion and stability.</p>
+                </div>
+                
+                <div class="big-picture-card">
+                    <div class="big-picture-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Emotional Intelligence</h4>
+                    <p>Leading with empathy and understanding human behavior to create meaningful connections and resolve conflicts.</p>
+                </div>
+                
+                <div class="big-picture-card">
+                    <div class="big-picture-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>People Cohesion</h4>
+                    <p>Building bridges between diverse groups and fostering unity through shared vision and mutual respect.</p>
+                </div>
+                
+                <div class="big-picture-card">
+                    <div class="big-picture-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Accountability</h4>
+                    <p>Establishing transparent governance systems that build trust and ensure responsible leadership.</p>
+                </div>
+            </div>
+            
+            <div class="quote-highlight">
+                <p>"Bold leaders giving more, dignifying others, showing empathy and being courageous — this is the matching type of leadership required to take on modern day inefficiencies."</p>
+                <cite>— USGPD Philosophy</cite>
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
+    <!-- Mission & Structure Section -->
     <section class="section bg-light" id="mission">
         <div class="container">
             <div class="section-header">
-                <h2>Our Mission</h2>
+                <h2>Our Mission & Structure</h2>
                 <p>Promoting the peace department concept globally</p>
             </div>
             
-            <div class="structure-grid">
+            <div class="structure-grid" id="structure">
                 <div class="structure-item">
-                    <h4>Leadership and Authority</h4>
+                    <h4><i class="fas fa-landmark text-primary" style="margin-right: 10px;"></i>Leadership and Authority</h4>
                     <p>The head of this department would be a secretary or cabinet level appointment whose sole role would be to provide to the President and government a peace path for all engagements locally, regionally and internationally.</p>
                 </div>
                 
                 <div class="structure-item">
-                    <h4>Department Structure</h4>
+                    <h4><i class="fas fa-sitemap text-primary" style="margin-right: 10px;"></i>Department Structure</h4>
                     <p>Built out like a foreign service with a local bureau for domestic issues. This department would have a corresponding unit to engage along with its foreign service counterpart.</p>
                 </div>
                 
                 <div class="structure-item">
-                    <h4>Funding</h4>
-                    <p>The department would receive direct annual funding from the national budget for all its activity domestic and abroad.</p>
+                    <h4><i class="fas fa-coins text-primary" style="margin-right: 10px;"></i>Funding Strategy</h4>
+                    <p>The department would receive direct annual funding from the national budget for all its activity domestic and abroad to ensure sustainable operations.</p>
                 </div>
                 
                 <div class="structure-item">
-                    <h4>Expanded Sub Units</h4>
-                    <p>The Peace Department shall establish units within every department and agency, including entities of the government i.e schools, and use these units as satellite for intervention and continuous training.</p>
+                    <h4><i class="fas fa-project-diagram text-primary" style="margin-right: 10px;"></i>Expanded Sub Units</h4>
+                    <p>The Peace Department shall establish units within every department and agency, including entities of the government i.e schools, and use these units as satellite for intervention.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section class="section" id="programs">
+    <!-- Governance Section -->
+    <section class="section" id="governance">
+        <div class="container">
+            <div class="section-header">
+                <h2>Governance & Leadership</h2>
+                <p>Frameworks for ethical and effective administration</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Governance Meeting" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                </div>
+                <div>
+                    <h3 id="leadership">Strategic Leadership</h3>
+                    <p>Our governance model emphasizes transparency, accountability, and ethical decision-making. We provide frameworks that help organizations navigate complex geopolitical landscapes while maintaining their core values.</p>
+                    <ul style="margin-bottom: 25px;">
+                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle text-primary"></i> 
+                            <span>Ethical Compliance & Oversight</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle text-primary"></i> 
+                            <span>Strategic Risk Management</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle text-primary"></i> 
+                            <span>Policy Implementation</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle text-primary"></i> 
+                            <span>Stakeholder Engagement</span>
+                        </li>
+                    </ul>
+                    <a href="#certifications" class="btn btn-primary">View Governance Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section (UPDATED - View Syllabus) -->
+    <section class="section bg-light" id="programs">
         <div class="container">
             <div class="section-header">
                 <h2>Our Programs</h2>
@@ -1802,40 +2358,43 @@ document.addEventListener('DOMContentLoaded', function() {
             
             <div class="programs-grid">
                 <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="1000 Points of Light Program">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="1000 Points of Light">
                     <div class="program-card-overlay">
                         <h3>1000 Points of Light</h3>
-                        <p>Free training in Conflict Resolution Intervention, Emotional Intelligence Introspection and Strategic Leadership Techniques.</p>
-                        <a href="#1000-points" class="btn btn-primary">Register Now</a>
+                        <p>Free training in Conflict Resolution, Emotional Intelligence and Strategic Leadership.</p>
+                        <div class="btn-group">
+                            <a href="#1000-points" class="btn btn-primary">Apply Now</a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Corporate Governance Program">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Governance">
                     <div class="program-card-overlay">
                         <h3>Corporate Governance USGPD®</h3>
-                        <p>Specialized Certification delivering cutting edge curriculum content on the discipline of corporate governance.</p>
-                        <a href="#certifications" class="btn btn-primary">Learn More</a>
+                        <p>Cutting edge curriculum on corporate governance discipline.</p>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" onclick="openModal('governance-modal')">View Syllabus</button>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="program-card">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Peace Building Program">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project Management">
                     <div class="program-card-overlay">
                         <h3>Strategic Project Management</h3>
-                        <p>USGPD® Specialized Certification for project management and leadership training.</p>
-                        <a href="#certifications" class="btn btn-primary">View Programs</a>
+                        <p>USGPD® Specialized Certification for project management.</p>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" onclick="openModal('project-modal')">View Syllabus</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Areas of Study Section -->
-    <section class="section study-areas" id="areas-study">
+    <!-- Areas of Study -->
+    <section class="section" id="areas-study">
         <div class="container">
             <div class="section-header">
                 <h2>Areas of Study</h2>
@@ -1844,50 +2403,35 @@ document.addEventListener('DOMContentLoaded', function() {
             
             <div class="study-grid">
                 <div class="study-item">
-                    <h4>Global Strategic Leadership</h4>
-                    <p>Developing frameworks for sustainable peace and conflict resolution across nations and communities.</p>
+                    <h4><i class="fas fa-globe" style="margin-right: 8px;"></i>Global Strategic Leadership</h4>
+                    <p>Developing frameworks for sustainable peace and conflict resolution across nations.</p>
                 </div>
-                
                 <div class="study-item">
-                    <h4>Negotiation and Conflict Resolution</h4>
+                    <h4><i class="fas fa-balance-scale" style="margin-right: 8px;"></i>Negotiation & Conflict Resolution</h4>
                     <p>Methodologies for mediation, negotiation, and sustainable peace agreements.</p>
                 </div>
-                
                 <div class="study-item">
-                    <h4>Psychology of Emotional Intelligence</h4>
-                    <p>Understanding and applying emotional intelligence in leadership and conflict resolution.</p>
+                    <h4><i class="fas fa-heart" style="margin-right: 8px;"></i>Emotional Intelligence</h4>
+                    <p>Understanding and applying emotional intelligence in leadership.</p>
                 </div>
-                
                 <div class="study-item">
-                    <h4>Human Behavior & Mental Process</h4>
-                    <p>Analysis of human behavior patterns and mental processes in organizational settings.</p>
+                    <h4><i class="fas fa-users" style="margin-right: 8px;"></i>Human Behavior</h4>
+                    <p>Analysis of human behavior patterns in organizational settings.</p>
                 </div>
-                
                 <div class="study-item">
-                    <h4>Analytical Thinking & Innovation</h4>
-                    <p>Developing critical thinking skills and innovative approaches to complex problems.</p>
+                    <h4><i class="fas fa-lightbulb" style="margin-right: 8px;"></i>Analytical Thinking</h4>
+                    <p>Developing critical thinking skills and innovative approaches.</p>
                 </div>
-                
                 <div class="study-item">
-                    <h4>Peace & Policy Implementation</h4>
-                    <p>Strategies for implementing peace policies and governance frameworks.</p>
-                </div>
-                
-                <div class="study-item">
-                    <h4>Peace & Diplomacy</h4>
-                    <p>Diplomatic approaches to conflict resolution and international peace building.</p>
-                </div>
-                
-                <div class="study-item">
-                    <h4>Project Management</h4>
-                    <p>Comprehensive project management methodologies for organizational excellence.</p>
+                    <h4><i class="fas fa-dove" style="margin-right: 8px;"></i>Peace & Diplomacy</h4>
+                    <p>Diplomatic approaches to conflict resolution and peace building.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 1000 Points of Light Section -->
-    <section class="section points-light-section" id="1000-points">
+    <!-- 1000 Points of Light (MOVED LOWER) -->
+    <section class="section bg-light" id="1000-points">
         <div class="container">
             <div class="section-header">
                 <h2>1000 Points of Light</h2>
@@ -1895,36 +2439,34 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             
             <div class="points-content">
-                <p>The USGPD will be conducting free training in the following areas as part of our 1000 Points of Light initiative: Conflict Resolution Intervention, Emotional Intelligence Introspection and Strategic Leadership Techniques.</p>
+                <p style="text-align: center; margin-bottom: 30px;">The USGPD conducts <strong>free training</strong> as part of our 1000 Points of Light initiative in: Conflict Resolution Intervention, Emotional Intelligence Introspection, and Strategic Leadership Techniques.</p>
                 
                 <div class="form-container">
-                    <h3>Application Form</h3>
-                    <p><strong>NOTE:</strong> Participants will be notified by email about the start date and program details.</p>
+                    <h3 style="text-align: center;">Application Form</h3>
+                    <p style="text-align: center; font-size: 0.95rem;"><i class="fas fa-info-circle text-primary"></i> Participants will be notified by email about the start date and program details.</p>
                     
-                    <form id="pointsForm" style="margin-top: var(--spacing-lg);">
-                        <div class="form-group">
-                            <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name" required>
+                    <form id="pointsForm">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                            <div class="form-group">
+                                <label for="points-name">Full Name *</label>
+                                <input type="text" id="points-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="points-email">Email Address *</label>
+                                <input type="email" id="points-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="points-phone">Phone Number</label>
+                                <input type="tel" id="points-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="points-organization">Organization</label>
+                                <input type="text" id="points-organization" name="organization">
+                            </div>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="organization">Organization (if applicable)</label>
-                            <input type="text" id="organization" name="organization">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="interest">Area of Interest</label>
-                            <select id="interest" name="interest">
+                            <label for="points-interest">Area of Interest</label>
+                            <select id="points-interest" name="interest">
                                 <option value="">Select an option</option>
                                 <option value="conflict-resolution">Conflict Resolution Intervention</option>
                                 <option value="emotional-intelligence">Emotional Intelligence Introspection</option>
@@ -1932,64 +2474,129 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <option value="all">All Areas</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="experience">Briefly describe your experience or interest in peace building</label>
-                            <textarea id="experience" name="experience" rows="4"></textarea>
+                            <label for="points-experience">Why do you want to join this program?</label>
+                            <textarea id="points-experience" name="experience" rows="4" placeholder="Tell us about your interest in peace building and leadership..."></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-large">
-                            Submit Application
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                Submit Application <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
+        <!-- Certifications Section (CORRIGIDO) -->
     <section class="section" id="certifications">
         <div class="container">
             <div class="section-header">
                 <h2>USGPD® Specialized Certifications</h2>
-                <p>Position yourself with critical knowledge engagement at the board or executive level</p>
+                <p>Position yourself with critical knowledge at the executive level</p>
             </div>
             
             <div class="payment-grid">
+                <!-- Card 1 -->
                 <div class="payment-card">
+                    <div style="margin-bottom: 15px;">
+                        <span style="background: var(--primary); color: var(--secondary); padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Most Popular</span>
+                    </div>
                     <h3>Corporate Governance USGPD®</h3>
                     <p>Next Generation Corporate Governance Training</p>
-                    <div class="price">Specialized Certification</div>
-                    <p>12 contact hours program with cutting edge curriculum content on corporate governance discipline.</p>
-                    <a href="https://buy.stripe.com/4gM14o2bjeJXdAAeeHdQQ02" target="_blank" class="btn btn-primary">Register Now</a>
+                    
+                    <div class="course-details-grid">
+                        <div class="course-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Duration</span>
+                            <strong>12 Hours</strong>
+                        </div>
+                        <div class="course-detail-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Format</span>
+                            <strong>Online/In-Person</strong>
+                        </div>
+                        <div class="course-detail-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificate</span>
+                            <strong>USGPD®</strong>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+                        <button class="btn btn-outline" onclick="openModal('governance-modal')">View Full Syllabus</button>
+                        <button class="btn btn-primary" onclick="openModal('quote-modal')">Request Quote</button>
+                    </div>
                 </div>
                 
+                <!-- Card 2 -->
                 <div class="payment-card">
-                    <h3>Strategic Project Management USGPD®</h3>
-                    <p>Strategic Project Management and Leadership Training</p>
-                    <div class="price">Specialized Certification</div>
-                    <p>Comprehensive project management methodologies for organizational excellence and leadership development.</p>
-                    <a href="https://buy.stripe.com/5kQ4gA2bj1Xb0NO0nRdQQ00" target="_blank" class="btn btn-primary">Register Now</a>
+                    <h3>Strategic Project Management</h3>
+                    <p>Leadership & Project Execution Training</p>
+                    
+                    <div class="course-details-grid">
+                        <div class="course-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Duration</span>
+                            <strong>16 Hours</strong>
+                        </div>
+                        <div class="course-detail-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Format</span>
+                            <strong>Online/In-Person</strong>
+                        </div>
+                        <div class="course-detail-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificate</span>
+                            <strong>USGPD®</strong>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+                        <button class="btn btn-outline" onclick="openModal('project-modal')">View Full Syllabus</button>
+                        <button class="btn btn-primary" onclick="openModal('quote-modal')">Request Quote</button>
+                    </div>
                 </div>
                 
+                <!-- Card 3 -->
                 <div class="payment-card">
                     <h3>Certificate in Project Management</h3>
-                    <p>Project Management and Execution</p>
-                    <div class="price">Professional Certification</div>
-                    <p>Fundamental to advanced project management skills for effective execution and delivery.</p>
-                    <a href="https://buy.stripe.com/9B6eVe8zH9pDeEEc6zdQQ01" target="_blank" class="btn btn-primary">Register Now</a>
+                    <p>Foundational Project Management Skills</p>
+                    
+                    <div class="course-details-grid">
+                        <div class="course-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Duration</span>
+                            <strong>10 Hours</strong>
+                        </div>
+                        <div class="course-detail-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Format</span>
+                            <strong>Online</strong>
+                        </div>
+                        <div class="course-detail-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificate</span>
+                            <strong>Professional</strong>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+                        <button class="btn btn-outline" onclick="openModal('pm-modal')">View Full Syllabus</button>
+                        <button class="btn btn-primary" onclick="openModal('quote-modal')">Request Quote</button>
+                    </div>
                 </div>
             </div>
             
-            <div class="text-center" style="margin-top: var(--spacing-xl);">
-                <p><strong>NOTE:</strong> An in-person version of the program is also available. Programs can be custom designed for corporate clients.</p>
-                <a href="#contact" class="btn btn-outline">Contact for Custom Programs</a>
+            <div class="text-center" style="margin-top: 40px;">
+                <p style="color: var(--gray);"><i class="fas fa-building text-primary" style="margin-right: 8px;"></i>Custom programs available for corporate clients and government agencies.</p>
+                <a href="#contact" class="btn btn-outline">Inquire About Custom Programs</a>
             </div>
         </div>
     </section>
 
-    <!-- Executive Team Section -->
+    <!-- Executive Team -->
     <section class="section bg-light" id="team">
         <div class="container">
             <div class="section-header">
@@ -1998,9 +2605,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             
             <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://i.postimg.cc/v8WKRWCb/1765820721894-019b231d-2be1-791c-b3b2-d84243787f09.png" 
-                         alt="Dr. Eton Simon" class="member-img">
+                <!-- President - Highlighted -->
+                <div class="team-member president-card">
+                    <img src="https://i.postimg.cc/v8WKRWCb/1765820721894-019b231d-2be1-791c-b3b2-d84243787f09.png" alt="Dr. Eton Simon" class="member-img">
                     <div class="member-info">
                         <h4>Dr. Eton Simon</h4>
                         <div class="member-title">President, U.S. Global Peace Department</div>
@@ -2008,24 +2615,133 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 
-                <div class="team-member">
-                    <img src="https://i.postimg.cc/vm6P0bGR/1765815788196-019b22d1-8280-7cb2-9c1d-a398de6b83bb.png" 
-                         alt="Rayonne D. Pile" class="member-img">
+                <!-- Executive Members -->
+                <div class="team-member executive-card">
+                    <img src="https://i.postimg.cc/vm6P0bGR/1765815788196-019b22d1-8280-7cb2-9c1d-a398de6b83bb.png" alt="Rayonne D. Pile" class="member-img">
                     <div class="member-info">
                         <h4>Rayonne D. Pile</h4>
                         <div class="member-title">Project Manager & Conflict Resolution Expert</div>
-                        <p class="member-bio">Mr. Pile is a seasoned project manager and conflict resolution expert with deep knowledge of global peace and diplomacy interventions from both an academic and corporate perspective. Having served as a Project Manager on both domestic and international projects, Mr. Pile brings a unique business acumen and experience to his functions.</p>
+                        <p class="member-bio">Mr. Pile is a seasoned project manager and conflict resolution expert with deep knowledge of global peace and diplomacy interventions from both an academic and corporate perspective.</p>
                     </div>
                 </div>
                 
-                <div class="team-member">
-                    <img src="https://i.postimg.cc/3rsDGGwj/1765820984678-019b2321-0ff4-7b44-b6a1-253e8fe43559.png" 
-                         alt="Leilia Ramson" class="member-img">
+                <div class="team-member executive-card">
+                    <img src="https://i.postimg.cc/3rsDGGwj/1765820984678-019b2321-0ff4-7b44-b6a1-253e8fe43559.png" alt="Leilia Ramson" class="member-img">
                     <div class="member-info">
                         <h4>Leilia Ramson</h4>
                         <div class="member-title">Veteran Educator & Peace Leader</div>
-                        <p class="member-bio">Mrs. Leilia Ramson, a veteran in education and leader for peace, is a member of Guyana Public Service Commission. She also served as both Commissioner and Chairperson of the Teaching Service Commission. She was also involved with the Children Needy Children's Funds and contributed significantly to children development.</p>
+                        <p class="member-bio">Mrs. Leilia Ramson, a veteran in education and leader for peace, is a member of Guyana Public Service Commission and former Chairperson of the Teaching Service Commission.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (NEW) -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our programs and services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the U.S. Global Peace Department?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>The U.S. Global Peace Department (USGPD) is a research and strategic consulting organization that provides high-end guidance to governments and organizations worldwide. We focus on peace building, strategic leadership, corporate governance, and conflict resolution through our "Big Picture" approach to expanded consciousness and sustainable development.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Who can participate in your programs?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Our programs are designed for government officials, corporate executives, NGO leaders, educators, and anyone in a leadership position who wants to develop strategic thinking and peace-building skills. The "1000 Points of Light" program is free and open to grassroots leaders and community organizers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are the certifications recognized internationally?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes, USGPD® certifications are recognized by organizations and institutions across 25+ countries. Our specialized certifications in Corporate Governance and Strategic Project Management are designed to meet international standards and are valued by employers and institutions worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long are the certification programs?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Program duration varies: Corporate Governance USGPD® is 12 contact hours, Strategic Project Management is 16 hours, and the foundational Project Management Certificate is 10 hours. Programs are available online or in-person, with flexible scheduling options for corporate clients.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is the "1000 Points of Light" program really free?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes, the 1000 Points of Light program is completely free. It's part of our mission to empower grassroots leaders with essential skills in conflict resolution, emotional intelligence, and strategic leadership. We believe that peace building should be accessible to everyone.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer custom programs for organizations?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Absolutely. We design custom training programs tailored to the specific needs of corporations, government agencies, and NGOs. Contact us to discuss your organization's requirements and we'll create a program that addresses your unique challenges and goals.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I request a consultation?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>You can request a consultation by filling out the contact form on our website, or by emailing us directly at info@usgpd.org. We typically respond within 24-48 hours to schedule an initial discussion about your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (NEW) -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Lead with Vision?</h2>
+                <p>Join hundreds of leaders worldwide who are making a difference through strategic thinking and peace-building expertise.</p>
+                <div class="cta-buttons">
+                    <a href="#1000-points" class="btn btn-primary btn-large">Apply for Free Training</a>
+                    <a href="#contact" class="btn btn-outline-light btn-large">Schedule Consultation</a>
                 </div>
             </div>
         </div>
@@ -2036,7 +2752,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="container">
             <div class="section-header">
                 <h2>Contact Us</h2>
-                <p>Connect with our team for research inquiries, program information, or strategic consultation</p>
+                <p>Connect with our team for inquiries, program information, or strategic consultation</p>
             </div>
             
             <div class="contact-grid">
@@ -2048,24 +2764,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Location</h4>
-                                <p>Global Headquarters<br>Research & Strategy Division</p>
+                                <h4>Headquarters</h4>
+                                <p>New York, United States<br>Global Operations</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p>info@usgpd.org<br>research@usgpd.org</p>
+                                <p>info@usgpd.org<br>programs@usgpd.org</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-clock"></i>
                             <div>
-                                <h4>Phone</h4>
-                                <p>+1 (555) 123-4567<br>Office Hours: 9AM-5PM EST</p>
+                                <h4>Response Time</h4>
+                                <p>Within 24-48 hours<br>Monday - Friday</p>
                             </div>
                         </div>
                     </div>
@@ -2073,41 +2787,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <div class="contact-form">
                     <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="contact-organization">Organization</label>
+                            <input type="text" id="contact-organization" name="organization">
                         </div>
-                        
                         <div class="form-group">
-                            <label for="organization">Organization</label>
-                            <input type="text" id="organization" name="organization">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="interest">Area of Interest</label>
-                            <select id="interest" name="interest">
+                            <label for="contact-interest">How Can We Help?</label>
+                            <select id="contact-interest" name="interest">
                                 <option value="">Select an option</option>
-                                <option value="research">Research Partnership</option>
-                                <option value="training">Leadership Training</option>
-                                <option value="consultation">Strategic Consultation</option>
                                 <option value="programs">Program Information</option>
-                                <option value="other">Other Inquiry</option>
+                                <option value="certification">Certification Inquiry</option>
+                                <option value="custom">Custom Training Request</option>
+                                <option value="consultation">Strategic Consultation</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="5" required placeholder="Tell us about your inquiry..."></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-large">
-                            Send Message
-                            <i class="fas fa-paper-plane"></i>
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            Send Message <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
@@ -2115,112 +2826,368 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Footer (SIMPLIFIED & IMPROVED) -->
+    <footer class="footer-simplified">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:80,cg:true,m/qt=q:95" 
-                             alt="USGPD Logo" class="footer-logo-img">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                        <img src="//img1.wsimg.com/isteam/ip/98bf484c-77b0-4d58-bcde-d50ed1271f50/IMG-20230331-WA0004.jpg/:/rs=h:60,cg:true,m/qt=q:95" alt="USGPD Logo" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--primary);">
+                        <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--white);">US<span style="color: var(--primary);">GPD</span></span>
                     </div>
                     <p>U.S. Global Peace Department delivers high-end research and strategic guidance for sustainable progress, peace building, and global governance.</p>
-                    
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@usgpd.org</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New York, United States</span>
                     </div>
                 </div>
                 
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
+                <div class="footer-nav-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-nav">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#big-picture">The Big Picture</a></li>
                         <li><a href="#programs">Programs</a></li>
-                        <li><a href="#governance">Governance</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-links">
-                    <h4>Programs</h4>
-                    <ul>
+                <div class="footer-nav-section">
+                    <h4 class="footer-heading">Programs</h4>
+                    <ul class="footer-nav">
                         <li><a href="#1000-points">1000 Points of Light</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#certifications">Corporate Governance</a></li>
+                        <li><a href="#certifications">Project Management</a></li>
                         <li><a href="#areas-study">Areas of Study</a></li>
-                        <li><a href="#corporate-governance">Corporate Governance</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to our newsletter for research insights and program updates.</p>
-                    
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <div class="footer-newsletter-section">
+                    <div class="footer-newsletter-box">
+                        <h4 class="footer-heading" style="padding-bottom: 0; margin-bottom: 15px;">Stay Updated</h4>
+                        <p>Subscribe for insights on peace building and leadership.</p>
+                        <form id="newsletterForm" class="newsletter-input-group">
+                            <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe <i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2025 U.S. Global Peace Department. All Rights Reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+            <div class="footer-bottom-bar">
+                <div class="footer-copyright">
+                    &copy; 2025 U.S. Global Peace Department. All Rights Reserved.
+                </div>
+                <div class="footer-social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
+    <!-- Back to Top -->
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-chevron-up"></i>
     </a>
 
-    <!-- JavaScript -->
+    <!-- MODALS -->
+    
+    <!-- Corporate Governance Modal -->
+    <div class="modal-overlay" id="governance-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Corporate Governance USGPD®</h3>
+                <p>Next Generation Corporate Governance Training</p>
+                <button class="modal-close" onclick="closeModal('governance-modal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="course-details-grid">
+                    <div class="course-detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Duration</span>
+                        <strong>12 Contact Hours</strong>
+                    </div>
+                    <div class="course-detail-item">
+                        <i class="fas fa-laptop"></i>
+                        <span>Format</span>
+                        <strong>Online / In-Person</strong>
+                    </div>
+                    <div class="course-detail-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificate</span>
+                        <strong>USGPD® Certified</strong>
+                    </div>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-book"></i> Course Overview</h4>
+                    <p style="color: var(--gray); margin-bottom: 0;">This specialized certification delivers cutting-edge curriculum content on the discipline of corporate governance, positioning participants with critical knowledge for board or executive level engagement.</p>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-list-check"></i> What You'll Learn</h4>
+                    <ul class="syllabus-list">
+                        <li><i class="fas fa-check"></i> Principles of Modern Corporate Governance</li>
+                        <li><i class="fas fa-check"></i> Board Structures and Responsibilities</li>
+                        <li><i class="fas fa-check"></i> Risk Management and Compliance</li>
+                        <li><i class="fas fa-check"></i> Ethical Leadership and Decision Making</li>
+                        <li><i class="fas fa-check"></i> Stakeholder Engagement Strategies</li>
+                        <li><i class="fas fa-check"></i> Governance in International Contexts</li>
+                        <li><i class="fas fa-check"></i> Case Studies and Best Practices</li>
+                    </ul>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-user-graduate"></i> Who Should Attend</h4>
+                    <p style="color: var(--gray); margin-bottom: 0;">Executives, board members, aspiring directors, governance professionals, and leaders seeking to enhance their understanding of corporate governance frameworks.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('governance-modal')">Close</button>
+                <button class="btn btn-primary" onclick="closeModal('governance-modal'); openModal('quote-modal');">Request Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Management Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Strategic Project Management USGPD®</h3>
+                <p>Leadership & Project Execution Training</p>
+                <button class="modal-close" onclick="closeModal('project-modal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="course-details-grid">
+                    <div class="course-detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Duration</span>
+                        <strong>16 Contact Hours</strong>
+                    </div>
+                    <div class="course-detail-item">
+                        <i class="fas fa-laptop"></i>
+                        <span>Format</span>
+                        <strong>Online / In-Person</strong>
+                    </div>
+                    <div class="course-detail-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificate</span>
+                        <strong>USGPD® Certified</strong>
+                    </div>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-book"></i> Course Overview</h4>
+                    <p style="color: var(--gray); margin-bottom: 0;">Comprehensive project management methodologies combined with strategic leadership principles for organizational excellence and effective delivery of complex initiatives.</p>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-list-check"></i> What You'll Learn</h4>
+                    <ul class="syllabus-list">
+                        <li><i class="fas fa-check"></i> Strategic Project Planning and Initiation</li>
+                        <li><i class="fas fa-check"></i> Resource Management and Allocation</li>
+                        <li><i class="fas fa-check"></i> Risk Assessment and Mitigation</li>
+                        <li><i class="fas fa-check"></i> Stakeholder Communication</li>
+                        <li><i class="fas fa-check"></i> Agile and Traditional Methodologies</li>
+                        <li><i class="fas fa-check"></i> Leadership in Project Environments</li>
+                        <li><i class="fas fa-check"></i> Project Monitoring and Evaluation</li>
+                    </ul>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-user-graduate"></i> Who Should Attend</h4>
+                    <p style="color: var(--gray); margin-bottom: 0;">Project managers, team leaders, executives overseeing projects, and professionals seeking to enhance their project delivery capabilities.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('project-modal')">Close</button>
+                <button class="btn btn-primary" onclick="closeModal('project-modal'); openModal('quote-modal');">Request Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PM Certificate Modal -->
+    <div class="modal-overlay" id="pm-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Certificate in Project Management</h3>
+                <p>Foundational Project Management Skills</p>
+                <button class="modal-close" onclick="closeModal('pm-modal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="course-details-grid">
+                    <div class="course-detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Duration</span>
+                        <strong>10 Contact Hours</strong>
+                    </div>
+                    <div class="course-detail-item">
+                        <i class="fas fa-laptop"></i>
+                        <span>Format</span>
+                        <strong>Online</strong>
+                    </div>
+                    <div class="course-detail-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificate</span>
+                        <strong>Professional</strong>
+                    </div>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-book"></i> Course Overview</h4>
+                    <p style="color: var(--gray); margin-bottom: 0;">Foundational to advanced project management skills for effective execution and delivery. Perfect for those new to project management or seeking to formalize their skills.</p>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-list-check"></i> What You'll Learn</h4>
+                    <ul class="syllabus-list">
+                        <li><i class="fas fa-check"></i> Project Management Fundamentals</li>
+                        <li><i class="fas fa-check"></i> Scope and Schedule Management</li>
+                        <li><i class="fas fa-check"></i> Budget Planning and Control</li>
+                        <li><i class="fas fa-check"></i> Team Coordination</li>
+                        <li><i class="fas fa-check"></i> Quality Assurance</li>
+                        <li><i class="fas fa-check"></i> Project Documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="syllabus-section">
+                    <h4><i class="fas fa-user-graduate"></i> Who Should Attend</h4>
+                    <p style="color: var(--gray); margin-bottom: 0;">Aspiring project managers, team members transitioning to PM roles, and professionals seeking foundational project management certification.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('pm-modal')">Close</button>
+                <button class="btn btn-primary" onclick="closeModal('pm-modal'); openModal('quote-modal');">Request Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request Quote Modal -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Request a Quote</h3>
+                <p>We'll get back to you within 24-48 hours</p>
+                <button class="modal-close" onclick="closeModal('quote-modal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="quote-name">Full Name *</label>
+                        <input type="text" id="quote-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-email">Email Address *</label>
+                        <input type="email" id="quote-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-organization">Organization</label>
+                        <input type="text" id="quote-organization" name="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-program">Program of Interest *</label>
+                        <select id="quote-program" name="program" required>
+                            <option value="">Select a program</option>
+                            <option value="corporate-governance">Corporate Governance USGPD®</option>
+                            <option value="strategic-pm">Strategic Project Management USGPD®</option>
+                            <option value="pm-certificate">Certificate in Project Management</option>
+                            <option value="custom">Custom Program</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-participants">Number of Participants</label>
+                        <select id="quote-participants" name="participants">
+                            <option value="1">Individual (1 person)</option>
+                            <option value="2-5">Small Group (2-5)</option>
+                            <option value="6-15">Medium Group (6-15)</option>
+                            <option value="16+">Large Group (16+)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-message">Additional Information</label>
+                        <textarea id="quote-message" name="message" rows="3" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                        Submit Request <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Functionality -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation Toggle
+            
+            // ===== UTILITY FUNCTIONS =====
+            function showNotification(message, type = 'success') {
+                const existing = document.querySelector('.notification');
+                if (existing) existing.remove();
+                
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.innerHTML = `
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i> 
+                    ${message}
+                `;
+                
+                document.body.appendChild(notification);
+                setTimeout(() => notification.classList.add('show'), 10);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }, 4000);
+            }
+
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            // ===== MOBILE NAVIGATION =====
             const mobileToggle = document.getElementById('mobileToggle');
             const mobileNav = document.getElementById('mobileNav');
             const mobileNavClose = document.getElementById('mobileNavClose');
             const overlay = document.getElementById('overlay');
             
-            mobileToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
+            function toggleMenu() {
+                mobileToggle.classList.toggle('active');
                 mobileNav.classList.toggle('active');
                 overlay.classList.toggle('active');
-                document.body.style.overflow = 'hidden';
-            });
+                document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            }
             
-            mobileNavClose.addEventListener('click', function() {
-                mobileToggle.classList.remove('active');
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-            
-            overlay.addEventListener('click', function() {
-                mobileToggle.classList.remove('active');
-                mobileNav.classList.remove('active');
-                this.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-            
-            // Close mobile menu when clicking on a link
-            const mobileLinks = document.querySelectorAll('.mobile-nav a');
-            mobileLinks.forEach(link => {
+            if (mobileToggle) mobileToggle.addEventListener('click', toggleMenu);
+            if (mobileNavClose) mobileNavClose.addEventListener('click', toggleMenu);
+            if (overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.mobile-nav a[href^="#"]').forEach(link => {
                 link.addEventListener('click', function() {
-                    mobileToggle.classList.remove('active');
-                    mobileNav.classList.remove('active');
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = '';
+                    if (mobileNav.classList.contains('active')) {
+                        toggleMenu();
+                    }
                 });
             });
-            
-            // Header scroll effect
+
+            // ===== STICKY HEADER =====
             const header = document.getElementById('header');
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 50) {
@@ -2229,8 +3196,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     header.classList.remove('scrolled');
                 }
             });
-            
-            // Back to Top Button
+
+            // ===== BACK TO TOP =====
             const backToTop = document.getElementById('backToTop');
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 300) {
@@ -2239,16 +3206,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     backToTop.classList.remove('active');
                 }
             });
-            
-            backToTop.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
+
+            if (backToTop) {
+                backToTop.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
-            });
-            
-            // Smooth scrolling for anchor links
+            }
+
+            // ===== SMOOTH SCROLLING =====
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const targetId = this.getAttribute('href');
@@ -2257,120 +3223,330 @@ document.addEventListener('DOMContentLoaded', function() {
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         e.preventDefault();
+                        
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
                         window.scrollTo({
-                            top: targetElement.offsetTop - 90,
+                            top: offsetPosition,
                             behavior: 'smooth'
                         });
                     }
                 });
             });
+
+            // ===== ANIMATED COUNTER =====
+            function animateCounters() {
+                const counters = document.querySelectorAll('.impact-number[data-count]');
+                
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current) + '+';
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target + '+';
+                        }
+                    };
+                    
+                    updateCounter();
+                });
+            }
+
+            // Trigger counter animation when visible
+            const impactBar = document.querySelector('.impact-bar');
+            if (impactBar) {
+                const counterObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounters();
+                            counterObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                counterObserver.observe(impactBar);
+            }
+
+            // ===== FAQ ACCORDION =====
+            const faqItems = document.querySelectorAll('.faq-item');
             
-            // Form Submissions
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all items
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // ===== FORMS HANDLING =====
+            
+            // Contact Form
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    const formData = new FormData(this);
-                    const name = formData.get('name');
-                    const email = formData.get('email');
+                    const name = document.getElementById('contact-name').value.trim();
+                    const email = document.getElementById('contact-email').value.trim();
+                    const message = document.getElementById('contact-message').value.trim();
                     
-                    if (!name || !email) {
-                        alert('Please fill in all required fields.');
+                    if (!name || !email || !message) {
+                        showNotification('Please fill in all required fields.', 'error');
                         return;
                     }
                     
-                    alert('Thank you for your message, ' + name + '! We will contact you at ' + email + ' within 24-48 hours.');
-                    this.reset();
+                    if (!isValidEmail(email)) {
+                        showNotification('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    const btn = this.querySelector('button[type="submit"]');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        showNotification(`Thank you, ${name}! We'll contact you within 24-48 hours.`);
+                        this.reset();
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 1500);
                 });
             }
-            
+
+            // Points of Light Form
             const pointsForm = document.getElementById('pointsForm');
             if (pointsForm) {
                 pointsForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    const formData = new FormData(this);
-                    const name = formData.get('full-name');
-                    const email = formData.get('email');
+                    const name = document.getElementById('points-name').value.trim();
+                    const email = document.getElementById('points-email').value.trim();
                     
                     if (!name || !email) {
-                        alert('Please fill in all required fields.');
+                        showNotification('Name and Email are required.', 'error');
                         return;
                     }
                     
-                    alert('Thank you for your application, ' + name + '! We will contact you at ' + email + ' with program details.');
-                    this.reset();
+                    if (!isValidEmail(email)) {
+                        showNotification('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    const btn = this.querySelector('button[type="submit"]');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        showNotification('Application submitted successfully! We\'ll be in touch soon.');
+                        this.reset();
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 1500);
                 });
             }
-            
-            // Newsletter Form Submission
-            const newsletterForm = document.querySelector('.newsletter-form');
+
+            // Newsletter Form
+            const newsletterForm = document.getElementById('newsletterForm');
             if (newsletterForm) {
                 newsletterForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    const emailInput = this.querySelector('input[type="email"]');
-                    const email = emailInput.value;
+                    const emailInput = document.getElementById('newsletter-email');
+                    const email = emailInput.value.trim();
                     
-                    if (!email || !email.includes('@')) {
-                        alert('Please enter a valid email address.');
+                    if (!email || !isValidEmail(email)) {
+                        showNotification('Please enter a valid email address.', 'error');
                         return;
                     }
                     
-                    alert('Thank you for subscribing to our newsletter!');
-                    emailInput.value = '';
+                    const btn = this.querySelector('button[type="submit"]');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        showNotification('Successfully subscribed to our newsletter!');
+                        emailInput.value = '';
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 1000);
+                });
+            }
+
+            // Quote Form
+            const quoteForm = document.getElementById('quoteForm');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('quote-name').value.trim();
+                    const email = document.getElementById('quote-email').value.trim();
+                    const program = document.getElementById('quote-program').value;
+                    
+                    if (!name || !email || !program) {
+                        showNotification('Please fill in all required fields.', 'error');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(email)) {
+                        showNotification('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    const btn = this.querySelector('button[type="submit"]');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        showNotification('Quote request submitted! We\'ll respond within 24-48 hours.');
+                        this.reset();
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        closeModal('quote-modal');
+                    }, 1500);
+                });
+            }
+
+            // ===== MOBILE DROPDOWN ACCORDION =====
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                const parentLi = dropdown.parentElement;
+                const link = parentLi.querySelector('a');
+                
+                if (link && dropdown) {
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-chevron-down';
+                    icon.style.cssText = 'float: right; transition: transform 0.3s; font-size: 12px;';
+                    link.appendChild(icon);
+                    
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const isOpen = dropdown.style.display === 'block';
+                        
+                        // Close all
+                        document.querySelectorAll('.mobile-dropdown').forEach(d => {
+                            d.style.display = 'none';
+                        });
+                        document.querySelectorAll('.mobile-nav .fa-chevron-down').forEach(i => {
+                            i.style.transform = 'rotate(0deg)';
+                        });
+                        
+                        // Open current if wasn't open
+                        if (!isOpen) {
+                            dropdown.style.display = 'block';
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                }
+            });
+
+            // ===== SCROLL ANIMATIONS =====
+            const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+            
+            const animateObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        animateObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Elements to animate
+            const animatedElements = document.querySelectorAll(
+                '.program-card, .study-item, .structure-item, .team-member, ' +
+                '.payment-card, .big-picture-card, .faq-item, .contact-item'
+            );
+            
+            animatedElements.forEach((el, index) => {
+                el.classList.add('animate-element');
+                el.style.transitionDelay = `${(index % 4) * 0.1}s`;
+                animateObserver.observe(el);
+            });
+
+            // ===== ACTIVE NAV HIGHLIGHT =====
+            function updateActiveNav() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-desktop > ul > li > a');
+                
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    if (href && href.includes(currentSection)) {
+                        link.classList.add('active');
+                    }
                 });
             }
             
-            // Dropdown functionality for mobile
-            const dropdownTriggers = document.querySelectorAll('.mobile-nav > ul > li > a');
-            dropdownTriggers.forEach(trigger => {
-                trigger.addEventListener('click', function(e) {
-                    if (this.nextElementSibling && this.nextElementSibling.classList.contains('mobile-dropdown')) {
-                        e.preventDefault();
-                        const dropdown = this.nextElementSibling;
-                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                    }
+            window.addEventListener('scroll', updateActiveNav);
+
+        }); // End DOMContentLoaded
+
+        // ===== MODAL FUNCTIONS (Global) =====
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close modal on overlay click
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                e.target.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                    modal.classList.remove('active');
                 });
-            });
-            
-            // Initialize all dropdowns as hidden
-            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
-                dropdown.style.display = 'none';
-            });
+                document.body.style.overflow = '';
+            }
         });
-        
-        // Add animation on scroll
-        window.addEventListener('scroll', function() {
-            const elements = document.querySelectorAll('.program-card, .study-item, .structure-item, .team-member, .payment-card');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        });
-        
-        // Initialize elements with animation styles
-        document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.program-card, .study-item, .structure-item, .team-member, .payment-card');
-            
-            animatedElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            });
-            
-            // Trigger initial animation check
-            setTimeout(() => {
-                window.dispatchEvent(new Event('scroll'));
-            }, 100);
-        });
+
     </script>
+
 </body>
 </html>
